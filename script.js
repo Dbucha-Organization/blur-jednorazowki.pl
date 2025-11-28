@@ -124,10 +124,10 @@ document.addEventListener("keydown", (e) => {
 const city = document.getElementById("city");
 const cont = document.querySelectorAll(".foot-cont-three a");
 
-city.addEventListener("click", openCont);
-
-function openCont() {
+city.addEventListener("click", toggleCont);
+function toggleCont() {
+  city.classList.toggle("active");
   Array.from(cont).forEach((el) => {
-    el.style.display = "block";
+    el.style.display = el.style.display === "block" ? "none" : "block";
   });
 }

@@ -131,3 +131,8 @@ function toggleCont() {
     el.style.display = el.style.display === "block" ? "none" : "block";
   });
 }
+
+const yearSpan = document.querySelector('#year');
+if (yearSpan) {
+    yearSpan.innerText = new Date().getFullYear();
+}
